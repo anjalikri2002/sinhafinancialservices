@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sinha Financial Services</title>
+
+  <!-- Correct Font Awesome Full Version -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Logo -->
+  <div class="logo-section">
+    <img src="logo final.jpg" alt="Sinha Financial Logo" />
+    <h1 class="logo-title">Sinha Financial Services</h1>
+  </div>
+
+  <!-- Scrolling Alert -->
+  <div class="scrolling-alert">
+    <div class="scroll-text">
+      🚨 All dealings and official information are only handled via our WhatsApp number: <strong>9155747746</strong>. No Telegram or alternate numbers. 🚨
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#mentorship">Mentorship</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-text">
+      <h1>Master the Art of Trading & Investing</h1>
+      <p>Learn price action, options, long-term investing & more from experts.</p>
+      <a href="#courses" class="btn-primary">Get Started</a>
+    </div>
+  </header>
+<!-- Course Section -->
+<section id="courses" class="section">
+  <h2><i class="fas fa-book"></i> The Ultimate Share Market Course</h2>
+  <div class="card-container">
+    <div class="card glass" onclick="openModal('courseModal')">
+      <h3>Basics to Advanced Strategies</h3>
+      <div class="price-tag">
+  <span class="new-price">₹2999</span>
+  <span class="old-price"><span class="cut-line"></span>₹4999</span>
+</div>
+
+      <ul>
+        <li>Live Weekend Classes</li>
+        <li>Lifetime Access + Certification</li>
+        <li>1-on-1 Interaction</li>
+      </ul>
+      <button class="btn-secondary">View Details</button>
+    </div>
+  </div>
+</section>
+
+<!-- Course Details Modal (List Only, No Image) -->
+<div class="modal" id="courseModal">
+  <div class="modal-text-content">
+    <button class="close-btn" onclick="closeModal('courseModal')" aria-label="Close modal">&times;</button>
+    <h3>Course Includes</h3>
+    <ul class="modal-list">
+      <li>✅ Price Action Analysis</li>
+      <li>✅ Demand and Supply Zones</li>
+      <li>✅ Global Market Analysis</li>
+      <li>✅ Option Trading</li>
+      <li>✅ Swing Trading</li>
+      <li>✅ Long Term Investing</li>
+      <li>✅ 1-on-1 Personalized Interaction</li>
+      <li>✅ Stock Picking & Risk-Reward Planning</li>
+    </ul>
+  </div>
+</div>
+<!-- Mentorship Section -->
+<section id="mentorship" class="section">
+  <h2><i class="fas fa-chalkboard-teacher"></i> Mentorship Program</h2>
+  <p>Join our personalized mentorship program designed for traders looking to grow with expert support and real-time insights.</p>
+
+  <div class="card-container">
+    
+    <!-- 1. Personal Guidance Card (No onclick) -->
+    <div class="card glass">
+      <h3>Personal Guidance</h3>
+      <ul>
+        <li>Live Market Analysis</li>
+        <li>Telegram Group Access</li>
+        <li>Custom Risk Plans</li>
+      </ul>
+      <!-- Scrolls to query section -->
+      <a href="#contact" class="btn">Join Now</a>
+    </div>
+
+    <!-- 2. Syllabus Card (Opens mentorship.jpg modal) -->
+    <div class="card glass course-card" onclick="openModal('imageModal')">
+      <h3>View Mentorship Syllabus</h3>
+      <p>Click to view syllabus</p>
+    </div>
+
+  </div>
+
+  <!-- Image Modal for Mentorship -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal('imageModal')">&times;</span>
+    <img class="modal-image-content" src="mentorship.jpg" alt="Mentorship Syllabus">
+  </div>
+</section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="section gallery-section fade-in">
+    <h2><i class="fas fa-images"></i> Gallery</h2>
+    <div class="slider-container">
+      <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+      <div class="slider-track" id="sliderTrack">
+        <img src="photo 4.jpg" alt="Gallery Image 1" class="slider-img">
+        <img src="photo 2.jpg" alt="Gallery Image 2" class="slider-img">
+        <img src="photo 3.jpg" alt="Gallery Image 3" class="slider-img">
+        <img src="photo 1.jpg" alt="Gallery Image 4" class="slider-img">
+        <img src="photo 5.jpg" alt="Gallery Image 4" class="slider-img">
+        <img src="photo 6.jpg" alt="Gallery Image 4" class="slider-img">
+        <img src="photo 7.jpg" alt="Gallery Image 4" class="slider-img">
+      <video class="slider-img" controls poster="video-thumbnail.jpg">
+        <source src="video.mp4" type="video/mp4">
+      </video>
+
+      </div>
+      <button class="slider-btn next" onclick="nextSlide()">❯</button>
+    </div>
+  </section>
+
+  <!-- Query Form -->
+  <section id="contact" class="section fade-in query-section">
+    <h2><i class="fas fa-envelope"></i> Send a Query</h2>
+    <form action="mailto:connect@sinhafinancialservices.com" method="POST" enctype="text/plain" class="query-form">
+      <input type="text" name="Name" placeholder="Your Name" required />
+      <input type="email" name="Email" placeholder="Your Email" required />
+      <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div style="text-align: center;">
+  <a href="https://wa.me/919155747746" target="_blank" rel="noopener" class="whatsapp-btn">
+  <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+</a>
+
+</div>
+
+  </section>
+
+  <!-- Founder Info -->
+ <section id="founder" class="section fade-in">
+  <h2><i class="fas fa-user-tie"></i> Founder</h2>
+  <div class="founder-card glass">
+    <img src="profile photo.jpg" alt="Founder Image">
+    <h3>Harsh Sinha</h3>
+    <p>Hello, I'm Harsh Sinha, Founder of Sinha Financial Services. With a passion for the stock market, trading, and investment since 2019, I've navigated the ups and downs of the trading world, continually learning and adapting. My journey began at 19 when I started my trading account, and since then, I've been driven to succeed in the financial sector.</p>
+    
+    <p>As an engineer by background and an MBA in Finance expertise, I've also honed my skills as a financial crime analyst in a leading MNC and currently work as an investigation officer in financial crime. These experiences have sharpened my trading acumen and deepened my understanding of the financial world.</p>
+    
+    <p>My vision for Sinha Financial Services is to empower individuals with comprehensive financial literacy and security, particularly those who are new to the world of finance. We aim to provide expert guidance, support, and resources to help people from all walks of life achieve their financial goals across various segments, including:</p>
+    
+    <ul class="modal-list">
+      <li>Stock Market Investing</li>
+      <li>Mutual Funds</li>
+      <li>Insurance</li>
+      <li>Retirement Planning</li>
+      <li>Wealth Management</li>
+      <li>And more</li>
+    </ul>
+    
+    <p>Our mission is to bridge the knowledge gap and provide financial analysis support to those who want to create wealth through informed financial decisions, but may not know where to start. Through Sinha Financial Services, I strive to make a positive impact on the financial lives of people around the world, helping them build a brighter financial future.</p>
+  </div>
+</section>
+
+
+  <!-- Certificate Section -->
+  <section id="certificate" class="section fade-in">
+    <h2><i class="fas fa-certificate"></i> Certificate</h2>
+    <a href="certificate.jpg" target="_blank" class="btn-primary">View Certificate</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sinha Financial Services. All rights reserved.</p>
+  </footer>
+ 
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919155747746" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener">
+  <i class="fa-brands fa-square-whatsapp" style="font-size: 36px; color: #0be0a0;"></i>
+</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
